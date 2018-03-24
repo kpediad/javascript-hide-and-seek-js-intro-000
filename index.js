@@ -16,10 +16,10 @@ function increaseRankBy(n) {
 function deepestChild() {
   let current = document.getElementById('grand-node')
   while (current) {
-    if(current.innerHTML != "") {
+    if(!current.firstElementChild) {
       return current
     } else {
-      current = current.child
+      current = current.firstElementChild
     }
   }
 }
